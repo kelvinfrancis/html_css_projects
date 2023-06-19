@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios html</title>
+    </head>
+    <body>
+
+        <h1>Validacion</h1>
+        <form>
+            <input type="text" required 
+                minlength="5" 
+                maxlength="15"
+                pattern="[A-Za-z ]+" 
+            />
+            <!--pattern expresion que ajusta un formato al input
+            [A-Za-z ]+ indica que solo recibe letras de la A hasta la Z
+            mayusculas y minusculas, se pueden repetir y agregar espacios-->
+
+            <input type="number" required 
+            min="5" 
+            max="20"
+        />
+
+            <input type="submit" value="enviar"/>
+        </form>
+
+        <h1>Formularios html</h1>
+        <form>
+            <fieldset>
+                <legend>Informacion personal</legend>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                
+                <div>
+                    <label for="descripcion">Descripcion:</label>
+                    <textarea id="descripcion"></textarea>
+                </div>
+
+                <div>
+                    Email:
+                    <input type="email"/>
+                </div>
+
+                <div>
+                    Contraseña:
+                    <input type="password"/>
+                </div>
+
+                <div>
+                    Radio:
+                    <input type="radio" name="genero" id="hombre" value="hombre"/>
+                    <label for="hombre">Hombre</label>
+
+                    <input type="radio" name="genero" id="mujer" value="mujer"/>
+                    <label for="mujer">Mujer</label>
+                </div>
+
+                <div>
+                    Select:
+                    <select>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="otro">Otro</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    Checkbox:
+                    <label>
+                        <input type="checkbox"/> Mayor de edad
+                    </label>
+
+                    <label>
+                        <input type="checkbox"/> Menor de edad
+                    </label>
+
+                    <div>
+                        Color:
+                        <input type="color"/>
+                    </div>
+
+                    <div>
+                        Fecha:
+                        <input type="date"/>
+                    </div>
+
+                    <div>
+                        Ficheros:
+                        <input type="file"/>
+                    </div>
+
+                    <div>
+                        Imagen:
+                        <input type="image" src="imagenes/sea-turtle.jpg" width="100"/>
+                    </div>
+
+                    <div>
+                        Oculto:
+                        <input type="hidden" name="oculto" value="Esto que presenta esta oculto"/>
+                    </div>
+
+                    <div>
+                        Numero:
+                        <input type="number"/>
+                    </div>
+
+                    <div>
+                        Rango:
+                        <input type="range"/>
+                    </div>
+
+                    <div>
+                        Buscar:
+                        <input type="search" name="buscar"/>
+                    </div>
+
+                    <div>
+                        Telefono:
+                        <input type="tel" name="telefono"/>
+                    </div>
+                    
+                    <div>
+                        Hora:
+                        <input type="time" name="tiempo"/>
+                    </div>
+                    
+                    <div>
+                        Mes:
+                        <input type="month" name="mes"/>
+                    </div>
+
+                    <div>
+                        URL:
+                        <input type="url" name="url"/>
+                    </div>
+
+                    <div>
+                        Barra progreso:
+                        <progress max="100" value="45"></progress>
+                    </div>
+
+                    <div>
+                        Meter:
+                        <meter max="100" value="45"></meter>
+                    </div>
+                    
+                    <div>
+                        Lista de datos:
+                        <input list="frutas" name="frutas"/>
+                        <datalist id="frutas">
+                            <option value="naranja"/>
+                            <option value="manzana"/>
+                            <option value="cereza"/>
+                            <option value="sandia"/>
+                            <option value="pera"/>
+                        </datalist>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <input type="submit" value="Enviar"/>
+            <input type="reset" value="Limpiar formulario"/>
+
+        </form>
+
+    </body>
+</html>
